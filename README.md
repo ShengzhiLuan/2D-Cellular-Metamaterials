@@ -1,7 +1,5 @@
 # A data-driven framework for structure-property correlation in ordered and disordered cellular metamaterials
-This repository provides the data and code for a data-driven framework focusing on structure-property correlation in cellular metamaterials. The proposed framework enables the prediction of macroscopic properties, but more importantly, also reveals their connection to key morphological characteristics, as identified by the integration of machine-learning models and interpretability algorithms.
-
-### This paper is currently under revision with PNAS, and the link of the paper is coming soon.
+This repository provides data and associated codes for a data-driven framework that enables prediction of macroscopic properties of 2D cellular metamaterials, and identifies their connection to key morphological characteristics, as identified by the integration of machine-learning models (Random Forest and GAM) and interpretability algorithms (SHAP analysis).
 
 ## Table of Contents
 - [Data](#data)
@@ -13,24 +11,24 @@ This repository provides the data and code for a data-driven framework focusing 
 ## Data
 ### Microstructure Data
 
-The microstructure data contains 1646 different tessellations, including both ordered and disordered. For visualization, each tessellation is represented by the corresponding node and connection (in the *Tessellation Dataset* folder), and two demos are provided to display the tessellation and/or microstructure.
+The microstructural data contains 1646 different tessellations, both ordered and disordered. For visualization, each tessellation is represented by the corresponding nodes and connectivity (in the *Tessellation Dataset* folder), and two demos are provided to display the tessellation and/or microstructure.
 
 > `Tessellation_Demo.m` Display of tessellation for a certain sample in the dataset.
 
-> `Microstructure_Demo.m` Display of microstructure for a certain sample at a specific relative density in the dataset.
+> `Microstructure_Demo.m` Display of microstructure for a certain sample for a given relative density in the dataset.
 
 ### Structure-Property Data
 
-The structure-property data contains 42 microstructural features and also the corresponding macroscopic property for 1646 different tessellations at 5 different relative densities, which in total consists of 8230 microstructures with 43 properties.
+The structure-property data contains 42 microstructural features, the corresponding effective stiffness for 1646 different tessellations at 5 different relative densities, which in total consists of 8230 microstructures with 43 parameters.
 
-> `Structure-Property-Data.csv` Each column represents a property with name listed in the header. Each five rows denote a microstructure at different relative densities in the same order with sample index in *Tessellation Dataset*.
+> `Structure-Property-Data.csv` Each column represents a property, as listed in the header. Every five rows correspond to a distinct topology with five  relative densities, using the same sample index as in *Tessellation Dataset*.
 
 ## Code Overview
-1. `Virtual microstructure generation` Generation of cellular metamaterial microstructure dataset.
-2. `Feature and property measurement` Measurement of feature and property for cellular metamaterials in the dataset.
-3. `Data Preparation` Converting the original mechanical data and generation of formal data files for future data-driven techniques.
-4. `Random Forest and SHAP` Model of random forest for property prediction and utilization of SHAP for structure-property correlation.
-5. `Generalized Additive Model` Model of GAM for property prediction and structure-property correlation.
+1. `Virtual microstructure generation` Generation of cellular microstructures.
+2. `Feature and property measurement` Extraction of features and stiffness calculation for each cellular metamaterial in the dataset.
+3. `Data Preparation` Generation of accessible data files for machine learning algorithms.
+4. `Random Forest and SHAP` Random forest regression model for stiffness prediction and utilization of SHAP analysis for structure-property correlation.
+5. `Generalized Additive Model` Generalized additive model for stiffness prediction and structure-property correlation.
 
 ## Prerequisites
 - Matlab (R2020a or later, full toolbox installation recommended)
@@ -43,6 +41,6 @@ The structure-property data contains 42 microstructural features and also the co
 Shengzhi Luan, Enze Chen, Joel John, Stavros Gaitanaros
 
 ## Contact
-For any further information, please feel free to contact us through email: stavrosg@jhu.edu.
+For any further information, please feel free to contact Shengzhi Luan (sluan2@jhu.edu) or Stavros Gaitanaros (stavrosg@jhu.edu).
 
 ![](./Figure/Framework.png)
