@@ -1,6 +1,8 @@
 # A data-driven framework for structure-property correlation in ordered and disordered cellular metamaterials
 This repository provides data and associated codes for a data-driven framework that enables prediction of macroscopic properties of 2D cellular metamaterials, and identifies their connection to key morphological characteristics, as identified by the integration of machine-learning models (Random Forest and GAM) and interpretability algorithms (SHAP analysis).
 
+![](./Figure/Framework.png)
+
 ## Table of Contents
 - [Data](#data)
 - [Code Overview](#code-overview)
@@ -42,5 +44,3 @@ Shengzhi Luan, Enze Chen, Joel John, Stavros Gaitanaros
 
 ## Contact
 For any further information, please feel free to contact Shengzhi Luan (sluan2@jhu.edu) or Stavros Gaitanaros (stavrosg@jhu.edu).
-
-![](./Figure/Framework.png)
